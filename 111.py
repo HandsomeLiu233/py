@@ -1,0 +1,5 @@
+print("fuck it")
+print("damn")
+print(233+65)
+print('255')
+print('iiwwwwdwdwdwdi')
