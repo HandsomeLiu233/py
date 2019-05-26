@@ -22,3 +22,4 @@ score()
 lst1=[randint(1,100) for i in range(100)]
 bubble(lst1)
 print(lst1)
+q=0
