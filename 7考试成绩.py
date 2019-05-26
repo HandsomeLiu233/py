@@ -13,7 +13,7 @@ def bubble(lst):
         for j in range(0,length-i-1):
             judge=lst[j]<lst[j+1] #如果前小于后
             if judge:
-                lst[j],lst[j+1]=lst[j+1],lst[j] #交换
+                lst[j],lst[j+1]=lst[j+1],lst[j] #交换顺序
                 flag=True
         if not flag:
             break
