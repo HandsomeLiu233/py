@@ -1,18 +1,21 @@
 from random import randint
 
-# 学生成绩生成
+
 from typing import List, Any, Union
 
-
+# 学生成绩生成,这个鬼鬼函数似乎还是不对，函数以外还是无法调用
 def score():
     print('student score function is called')
-    lst1: List[Union[int, Any]] = [randint(1, 100) for i in range(100)]
+    lst1=[]
+    for dd in range(100):
+        lst1.append(randint(1,100))
     print(lst1)
 
 
 
 # 冒泡排序，部分借鉴了书本
 def bubble(lst):
+    print('遵循我的召唤，开始冒泡排序！')
     length = len(lst)
     for i in range(0, length):
         flag = False
@@ -25,6 +28,7 @@ def bubble(lst):
             break
 
 def grade(lst):
+    print('遵循我的召唤，给成绩分级！')
     convert=[]
     length=len(lst)
     for k in range(0,length):
