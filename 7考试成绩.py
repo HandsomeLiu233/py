@@ -3,10 +3,9 @@ from random import randint
 
 from typing import List, Any, Union
 
-# 学生成绩生成,这个鬼鬼函数似乎还是不对，函数以外还是无法调用
-def score():
+#可以调用，完美
+def score(lst1):
     print('student score function is called')
-    lst1=[]
     for dd in range(100):
         lst1.append(randint(1,100))
     print(lst1)
@@ -45,7 +44,12 @@ def grade(lst):
     print(convert)
 
 
-lst3: List[Union[int, Any]] = [randint(1, 100) for eee in range(100)] #生成随机成绩
-bubble(lst3) #排序
-print(lst3)
-grade(lst3)
+#lst3: List[Union[int, Any]] = [randint(1, 100) for eee in range(100)] #生成随机成绩
+#bubble(lst3) #排序
+#print(lst3)
+#grade(lst3)
+
+lst1=[]
+score(lst1)
+bubble(lst1)
+grade(lst1)
