@@ -43,13 +43,35 @@ def grade(lst):
             convert.append(str(lst[k])+'分 优秀')
     print(convert)
 
+def convertnew(xx):
+    if xx < 60:
+        return('分 不及格')
+    elif xx <= 69:
+        return('分 及格')
+    elif xx <= 79:
+        return('分 一般')
+    elif xx <= 89:
+        return('分 良好')
+    elif xx<=100:
+        return('分 优秀')
+    else:
+        return('数据不合法喵')
+
 
 #lst3: List[Union[int, Any]] = [randint(1, 100) for eee in range(100)] #生成随机成绩
 #bubble(lst3) #排序
 #print(lst3)
 #grade(lst3)
 
+#lst1=[]
+#score(lst1)
+#bubble(lst1)
+#grade(lst1)
+
+
 lst1=[]
 score(lst1)
-bubble(lst1)
-grade(lst1)
+
+for ii in range(len(lst1)):
+   lst1[ii]=(convertnew(lst1[ii]))
+print(lst1)
