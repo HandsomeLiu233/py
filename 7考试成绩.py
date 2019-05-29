@@ -1,9 +1,9 @@
 from random import randint
 
 
-from typing import List, Any, Union
 
 #可以调用，完美
+
 def score(lst1):
     print('student score function is called')
     for dd in range(100):
