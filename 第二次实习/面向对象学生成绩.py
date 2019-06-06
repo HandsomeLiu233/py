@@ -33,6 +33,7 @@ def randomname():
         if num==2:
             name=(name+random.choice(['瓜','皮','刚','屁','干','插','比','水','鸟','蛋','丑','头']))
         return(name)
+
 #随机成绩的生成
 def randomscore():
     sss=random.randint(1,100)
@@ -45,9 +46,10 @@ def randomnumber():
 
 
 
-
+#建立一个包含100个项目的列表，方便之后把信息放进去
 z=[0 for i in range(100)]
-shu=100
+
+shu=100 #我忘了这个是干啥的了
 
 #学生信息的生成
 def generateinfo():
@@ -61,6 +63,7 @@ def printInfo():
     for k in range(100):
         print(z[k].get_name(),z[k].get_number(),z[k].get_score())
 
+#冒泡排序
 def bubble():
     print('遵循我的召唤，开始冒泡排序！')
     length = 100
@@ -73,8 +76,9 @@ def bubble():
                 flag = True
         if not flag:
             break
-
+#成绩转换
 def convert(xx):
+    #print('遵循我的召唤，转换成绩！')
     if xx < 60:
         return('不及格')
     elif xx <= 69:
@@ -92,7 +96,7 @@ def convert(xx):
 generateinfo()
 bubble()
 
-#转换成绩
+#遍历以转换成绩
 for kk in range(100):
     z[kk].score=convert(z[kk].score)
 
@@ -103,7 +107,3 @@ printInfo()
 
 
 
-#zm = Student('zhangming', 20, [69, 88, 100])
-#print(zm.get_name())
-#print(zm.get_number())
-#print(zm.get_course())
