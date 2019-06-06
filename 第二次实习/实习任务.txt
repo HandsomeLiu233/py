@@ -1,0 +1,18 @@
+基础练习：
+1、	编程练习字符串的格式化输出：掌握format、%运算符的使用方法。
+2、初始化任意字符串，练习字符串常用函数的调用：
+find()、rfind()、index()、rindex()、count()
+split()、rsplit()、partition()、rpartition()
+join()、lower()、upper()、capitalize()、title()、swapcase()
+replace()、strip()、rstrip()、lstrip()
+isalnum()、isalpha()、isdigit()、isspace()、isupper()、islower()
+3、对指定的字符串进行加密，要求使用maketrans()、translate()函数。
+4、打开一个文本文件，读取文件中的内容，并按行输出到屏幕上。
+综合练习：
+5、类的综合运用
+（1）构造一个学生类Student，要求如下：
+具有三个成员：姓名、学号、英语成绩
+要求具有构造函数和析构函数。
+要求类中定义成员函数：printInfo，实现对学生姓名、学号、英语成绩的输出。
+（2）随机生成100个Student对象，学生的姓名、学号都随机生成，学生的考试成绩（0-100）。
+（3）将学生的成绩，按照由高到低的顺序进行排序，然后将百分制成绩转换为“优秀、良好、中等、及格、不及格”，然后输出结果。
