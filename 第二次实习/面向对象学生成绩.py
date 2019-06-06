@@ -21,11 +21,10 @@ class Student():
 
     def get_score(self):
         a = self.score
-        if isinstance(a, int):
-            return a
+        return a
 
 
-
+#随机名字的生成
 def randomname():
     for i in range(0,1):
         num=random.choice([1,2])
@@ -34,11 +33,12 @@ def randomname():
         if num==2:
             name=(name+random.choice(['瓜','皮','刚','屁','干','插','比','水','鸟','蛋','丑','头']))
         return(name)
-
+#随机成绩的生成
 def randomscore():
     sss=random.randint(1,100)
     return(sss)
 
+#随机学号的生成
 def randomnumber():
     nnn=random.randint(100000,999999)
     return(nnn)
@@ -48,11 +48,14 @@ def randomnumber():
 
 z=[0 for i in range(100)]
 shu=100
+
+#学生信息的生成
 def generateinfo():
     print('遵循我的召唤，开始给学生创造成绩')
     for j in range(100):
         z[j]=Student(randomname(),randomnumber(),randomscore())
 
+#学生成绩的打印
 def printInfo():
     print('显现吧，学生的成绩')
     for k in range(100):
@@ -71,12 +74,30 @@ def bubble():
         if not flag:
             break
 
-
+def convert(xx):
+    if xx < 60:
+        return('不及格')
+    elif xx <= 69:
+        return('及格')
+    elif xx <= 79:
+        return('一般')
+    elif xx <= 89:
+        return('良好')
+    elif xx<=100:
+        return('优秀')
+    else:
+        return('数据不合法喵')
 
 
 generateinfo()
 bubble()
+
+#转换成绩
+for kk in range(100):
+    z[kk].score=convert(z[kk].score)
+
 printInfo()
+
 
 
 
