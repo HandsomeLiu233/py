@@ -11,4 +11,19 @@ def UseOfFormat():
 def FormatString():
     name='liuao'
     address='CUG 56# 245'
+    print(f'my name is {name},and I am living in {address}') # do not forger r in front of '
 
+#字符串的常用方法和操作
+#find()、rfind()、index()、rindex()、count()
+
+def commonstroperate1():
+    s='dad,mom,grandfather,dad,grandmother,brother,sister,grandson'
+    print(s.find('dad'))
+    print(s.find('mom'))
+    print(s.find('dad',4)) #返回的似乎都是数字，是单词第一次出现的第一个字符的位置
+    print(s.rfind('grand')) #可以从后往前查找
+    #find和rfind可以用数字指定范围find(str,上限,下限)
+    print(s.index('dad')) #返回字符串首次出现的位置，那和find有什么区别呢？
+
+
+commonstroperate1()
