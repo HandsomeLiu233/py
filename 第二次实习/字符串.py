@@ -14,6 +14,7 @@ def FormatString():
     print(f'my name is {name},and I am living in {address}') # do not forger r in front of '
 
 #字符串的常用方法和操作
+
 #find()、rfind()、index()、rindex()、count()
 
 def commonstroperate1():
@@ -24,6 +25,15 @@ def commonstroperate1():
     print(s.rfind('grand')) #可以从后往前查找
     #find和rfind可以用数字指定范围find(str,上限,下限)
     print(s.index('dad')) #返回字符串首次出现的位置，那和find有什么区别呢？
+    print(s.count('dad')) #统计字符串出现的次数
 
 
-commonstroperate1()
+#split()、rsplit()、partition()、rpartition()
+
+def commonstroperate2():
+    s = 'dad,mom,grandfather,dad,grandmother,brother,sister,grandson'
+    print(s.split(',')) #按照要求分割字符
+
+
+
+commonstroperate2()
