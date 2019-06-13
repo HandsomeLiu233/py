@@ -18,7 +18,7 @@ sheet.write(0, 1, '姓名')
 sheet.write(0, 2, '性别')
 sheet.write(0, 3, '成绩')
 
-# 开始写数据咯
+# 开始写数据
 i = 1
 for line in lines:
     line = line.strip('\n')
@@ -28,6 +28,7 @@ for line in lines:
     sex1 = line[2]
     score1 = int(line[3])
 
+#把切分之后的数据写进去
     sheet.write(i, 0, number1)
     sheet.write(i, 1, name1)
     sheet.write(i, 2, sex1)

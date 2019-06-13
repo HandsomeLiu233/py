@@ -23,6 +23,7 @@ for line in lines:
     line=line.strip().split(' ')
     ws.append(line)
 
+
 wb.save(excelname)
 
 

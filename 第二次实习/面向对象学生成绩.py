@@ -32,6 +32,10 @@ class Student():
         print('作为类的函数，显现吧，学生的成绩')
         for k in range(100):
             print(z[k].get_name(), z[k].get_number(), z[k].get_score())
+    def classprintInfo1(self):
+        print('作为类2342的函数，显现吧，学生的成绩')
+        print(self.get_name(), self.get_number(), self.get_score())
+
 
 
 # 随机名字的生成
@@ -57,7 +61,7 @@ def randomnumber():
     return (nnn)
 
 
-# 建立一个包含100个项目的列表，方便之后把信息放进去
+# 建立一个包含100个项目的列表，方便之后把信息放进去。实际上应该用append加入列表，这么做太傻了
 z = [0 for i in range(100)]
 
 shu = 100  # 我忘了这个是干啥的了
@@ -116,4 +120,16 @@ bubble()
 for kk in range(100):
     z[kk].score = convert(z[kk].score)
 
+#for x in range(100):
+ #   print(z[x].classprintInfo1())
+
 Student.classprintInfo()
+
+
+
+
+
+
+
+
+print(z[2].name) #由于name是一个公有的对象，可以直接被调用，不需要用get_name调用了，但是调用方法注意，是变量名.成员名
