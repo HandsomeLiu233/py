@@ -1,5 +1,10 @@
-print("fuck it")
-print("damn")
-print(233+65)
-print('255')
-print('iiwwwwdwdwdwdi')
+def tt():
+    return('ttttt')
+
+def dd():
+    print('ddddd')
+
+tt()+'yy'
+'ttttt'+'yy'
+dd()+'yy'  
+print('dddd')+'yy'
