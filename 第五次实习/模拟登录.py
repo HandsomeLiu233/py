@@ -58,7 +58,7 @@ class Application_ui(Frame):
 
         self.Text2Var = StringVar(value='')
         self.Text2Font = Font(font=('宋体',12))
-        self.Text2 = Entry(self.top, textvariable=self.Text2Var, font=self.Text2Font)
+        self.Text2 = Entry(self.top, textvariable=self.Text2Var, font=self.Text2Font,show='*')
         self.Text2.setText = lambda x: self.Text2Var.set(x)
         self.Text2.text = lambda : self.Text2Var.get()
         self.Text2.place(relx=0.314, rely=0.369, relwidth=0.551, relheight=0.145)
@@ -104,7 +104,14 @@ class Application(Application_ui):
             self.Label3.setText = lambda x: self.Label3Var.set(x)
             self.Label3.text = lambda: self.Label3Var.get()
             self.Label3.place(relx=0.02, rely=0.652, relwidth=0.414, relheight=0.23)
-
+        else:
+            self.Label3Var = StringVar(value='登录失败')
+            self.Label3Font = Font(font=('宋体', 17))
+            self.Label3 = Label(self.top, text='登录失败', anchor='w', textvariable=self.Label3Var,
+                                font=self.Label3Font)
+            self.Label3.setText = lambda x: self.Label3Var.set(x)
+            self.Label3.text = lambda: self.Label3Var.get()
+            self.Label3.place(relx=0.02, rely=0.652, relwidth=0.414, relheight=0.23)
         pass
 
 if __name__ == "__main__":
