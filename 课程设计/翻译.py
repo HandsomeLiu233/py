@@ -43,7 +43,7 @@ class Application_ui(Frame):
         self.Label1.bind('<Button-1>', self.Label1_Button_1)
 
         self.Text1Var = StringVar(value='')
-        self.Text1Font = Font(font=('宋体',9))
+        self.Text1Font = Font(font=('宋体',15))
         self.Text1 = Entry(self.top, textvariable=self.Text1Var, font=self.Text1Font)
         self.Text1.setText = lambda x: self.Text1Var.set(x)
         self.Text1.text = lambda : self.Text1Var.get()
@@ -57,7 +57,7 @@ class Application_ui(Frame):
         self.Label2.place(relx=0.016, rely=0.341, relwidth=0.21, relheight=0.292)
 
         self.Text2Var = StringVar(value='')
-        self.Text2Font = Font(font=('宋体',9))
+        self.Text2Font = Font(font=('宋体',15))
         self.Text2 = Entry(self.top, textvariable=self.Text2Var, font=self.Text2Font)
         self.Text2.setText = lambda x: self.Text2Var.set(x)
         self.Text2.text = lambda : self.Text2Var.get()
@@ -87,11 +87,12 @@ class Application(Application_ui):
             if word==info[i][0]:
                 print(info[i][1])
                 self.Text2Var = StringVar(value=info[i][1])
-                self.Text2Font = Font(font=('宋体', 9))
+                self.Text2Font = Font(font=('宋体', 15))
                 self.Text2 = Entry(self.top, textvariable=self.Text2Var, font=self.Text2Font)
                 self.Text2.setText = lambda x: self.Text2Var.set(x)
                 self.Text2.text = lambda: self.Text2Var.get()
                 self.Text2.place(relx=0.256, rely=0.315, relwidth=0.61, relheight=0.633)
+                break
             else:
                 self.Text2Var = StringVar(value='找不到这个单词')
                 self.Text2Font = Font(font=('宋体', 15))

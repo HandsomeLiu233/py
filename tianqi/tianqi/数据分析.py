@@ -1,8 +1,10 @@
+#这个代码是在是太乱了，我都不敢随便把某些代码扔进函数里（o(╥﹏╥)o）
+
+
 import pandas as pd
-import numpy as np
 import matplotlib.pyplot as plt
 import matplotlib
-import string
+
 
 matplotlib.rcParams['font.sans-serif'] = ['SimHei']
 df = pd.read_csv('D:/result.csv',usecols=['日期', 'PM2.5'],encoding='gbk')
@@ -13,6 +15,7 @@ df_dt=pd.to_datetime(df.日期,format="%Y/%m/%d") #有点不理解
 s_M=df_dt.dt.month
 df['月份']=s_M
 df_month=df.groupby('月份').sum()
+
 #为这个二维表增加一行作为月份https://blog.csdn.net/luoganttcc/article/details/77570024
 df_month['month']='0'
 for i in range(12):
@@ -20,6 +23,7 @@ for i in range(12):
 df_month.plot(x='month')
 plt.title('PM2.5月走势图')
 plt.savefig('month.jpg')
+
 #季度箱型图
 one=df_month[:3].sum()
 two=df_month[3:6].sum()

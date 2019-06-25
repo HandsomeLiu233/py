@@ -1,7 +1,6 @@
 import scrapy
 import pandas as pd
-import string
-
+from scrapy.exceptions import CloseSpider
 
 class MySpider(scrapy.spiders.Spider):
     name='Stq'
@@ -16,14 +15,14 @@ class MySpider(scrapy.spiders.Spider):
         dd = "{0:02d}".format(d)
         next_url=u.format(dd)
         if dd=='02':
-            data.to_csv('D:/result.csv', mode='a', header=True, encoding="gbk")
+            data.to_csv('result.csv', mode='a', header=True, encoding="gbk")
         else:
-            data.to_csv('D:/result.csv', mode='a', header=False, encoding="gbk")
-
+            data.to_csv('result.csv', mode='a', header=False, encoding="gbk")
+        if dd=='13':
+            raise CloseSpider('end')
 
         try:
             yield scrapy.Request(url=next_url,callback=self.parse)
 
         except:
-            dd>3
             pass

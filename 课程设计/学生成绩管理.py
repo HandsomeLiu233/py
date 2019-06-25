@@ -1,5 +1,6 @@
+#数据文件位于score.txt，注意编码，我用的是utf-8
 
-
+#读入数据，保存到列表info
 def openfile(lst):
     print('正在读入数据')
     txtname = 'score.txt'
@@ -9,6 +10,7 @@ def openfile(lst):
         line=line.strip().split(' ')
         lst.append(line)
 
+#从列表info中写入数据到TXT，使用的是w模式（覆盖原有数据）
 def writefile():
     print('正在将数据写入')
     txtname = 'score.txt'
@@ -19,6 +21,7 @@ def writefile():
         fopen.write('\n')
     fopen.close()
 
+#输入学生数据
 def inputinfo():
     while True:
         data=input('请输入学生成绩信息\n 数据按照 学号 姓名 英语 高数 Python语言 依次录入 用空格分开\n输入quit退出\n ')
@@ -26,9 +29,10 @@ def inputinfo():
             break
         data=data.strip().split(' ')
         info.append(data)
-        writefile()
+        writefile()  #输入之后给一个储存，防止数据因为意外不能保存所导致的数据丢失
         print('数据录入成功')
 
+#按照关键词+数值搜索学生数据
 def search():
     while True:
         SearchWord=input('请输入你想要查找的项目及其数值\n 用空格分开 如：姓名 刘傲\n输入其他数值表示退出\n')
@@ -50,6 +54,7 @@ def search():
             if info[i][Searchco]==SearchWord[1]:
                 print(info[i])
 
+#仍然是祖传的冒泡排序用来排列二维表
 def bubble():
     while True:
         SearchWord=input('请输入你想要排序的项目\n输入其他数值表示退出\n')
@@ -81,13 +86,7 @@ def bubble():
             print(info[ii])
 
 
-
-'''
-openfile(info)
-bubble()
-writefile()
-'''
-
+#仿效Gayhub程序的思路，走main函数（笑）
 def main():
     openfile(info)
     while True:
@@ -110,5 +109,7 @@ def main():
             writefile()
             break
 
+
+#主程序（大雾）
 info=[]
 main()
